@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-container {
+            /* Sets the container's width, centers it, and adds a subtle box shadow. */
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            /* A light background color for contrast */
+            border-radius: 12px;
+            overflow: hidden;
+            /* Ensures the image respects the border-radius */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            /* Makes the image fully responsive and centered within its container. */
+            width: 100%;
+            height: auto;
+            display: block;
+            /* Removes any default spacing below the image */
+        }
+
+        /* We can add a simple hover effect for interactivity */
+        .image-container:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            /* A more pronounced shadow on hover */
+            transform: translateY(-2px);
+            /* A subtle lift effect */
+            transition: all 0.3s ease-in-out;
+            /* Smooth transition for the hover effect */
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="image-container">
+        <img src="./Augustine.png" alt="Headshot of a man" class="profile-image">
+    </div>
+
+    <div class="image-container">
+        <img src="./Vinod1.png" alt="Headshot of a man" class="profile-image">
+    </div>
+
+    <div class="image-container">
+        <img src="./Sivaraj1.png" alt="Headshot of a man" class="profile-image">
+    </div>
+
+</body>
+
+</html>

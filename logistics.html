@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +16,26 @@
             --dark-color: #2c3e50;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: var(--font-main);
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         /* Header Styles */
         header {
             background-color: var(--primary-color);
@@ -45,45 +46,45 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
             display: flex;
             align-items: center;
         }
-        
+
         .logo i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 2rem;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent-color);
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./containers.jpg');
@@ -93,12 +94,12 @@
             text-align: center;
             padding: 6rem 1rem;
         }
-        
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
@@ -106,7 +107,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
@@ -119,33 +120,33 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: #e67e22;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .btn-outline {
             background-color: transparent;
             border: 2px solid white;
         }
-        
+
         .btn-outline:hover {
             background-color: white;
             color: var(--primary-color);
         }
-        
+
         /* Sections */
         section {
             padding: 5rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -153,7 +154,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title h2:after {
             content: '';
             position: absolute;
@@ -163,14 +164,14 @@
             bottom: -10px;
             left: 25%;
         }
-        
+
         .section-title p {
             color: #777;
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
-        
+
         /* About Logistics Section */
         .about-content {
             display: flex;
@@ -178,19 +179,19 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .about-text {
             flex: 1;
             min-width: 300px;
             padding-right: 2rem;
         }
-        
+
         .about-text h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.8rem;
         }
-        
+
         .about-image {
             flex: 1;
             min-width: 300px;
@@ -199,20 +200,20 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .service-card {
             background-color: white;
             border-radius: 10px;
@@ -222,11 +223,11 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .service-icon {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             height: 100px;
@@ -236,36 +237,36 @@
             color: white;
             font-size: 2.5rem;
         }
-        
+
         .service-content {
             padding: 1.5rem;
             flex-grow: 1;
         }
-        
+
         .service-content h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .service-content ul {
             list-style-type: none;
             margin: 1rem 0;
         }
-        
+
         .service-content ul li {
             margin-bottom: 0.5rem;
             display: flex;
             align-items: flex-start;
         }
-        
+
         .service-content ul li:before {
             content: '✓';
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        
+
         /* Approach Section */
         .approach-steps {
             display: flex;
@@ -274,7 +275,7 @@
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .step {
             background-color: white;
             border-radius: 10px;
@@ -286,11 +287,11 @@
             text-align: center;
             transition: transform 0.3s;
         }
-        
+
         .step:hover {
             transform: translateY(-5px);
         }
-        
+
         .step-number {
             background-color: var(--primary-color);
             color: white;
@@ -303,19 +304,19 @@
             margin: 0 auto 1rem;
             font-weight: bold;
         }
-        
+
         .step h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* Why Choose Us Section */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+
         .feature {
             text-align: center;
             padding: 2rem 1rem;
@@ -324,22 +325,22 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
         }
-        
+
         .feature i {
             font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
+
         .feature h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* Stats Section */
         .stats-container {
             display: flex;
@@ -348,52 +349,52 @@
             text-align: center;
             margin: 3rem 0;
         }
-        
+
         .stat {
             flex: 1;
             min-width: 200px;
             padding: 1.5rem;
         }
-        
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-text {
             color: #777;
             font-weight: 500;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark-color);
             color: white;
             padding: 3rem 0 1rem;
         }
-        
+
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section {
             flex: 1;
             min-width: 300px;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section h3 {
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
             position: relative;
             padding-bottom: 0.5rem;
         }
-        
+
         .footer-section h3:after {
             content: '';
             position: absolute;
@@ -403,44 +404,44 @@
             bottom: 0;
             left: 0;
         }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section ul li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-section ul li a {
             color: #ddd;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-section ul li a:hover {
             color: var(--accent-color);
         }
-        
+
         .contact-info {
             display: flex;
             align-items: center;
             margin-bottom: 0.8rem;
         }
-        
+
         .contact-info i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+
         /* Responsive Design */
-        @media (max-width: 768px) {
+        /*  @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
@@ -470,20 +471,69 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
+        } */
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                width: 200px;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
+            <!-- <nav>
                 <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="logistics.html" class="active">Logistics</a></li>
+                    <li><a href="commodities.html">Commodities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> -->
+            <nav>
+                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
                     <li><a href="commodities.html">Commodities</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -505,13 +555,18 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Logistics Services</h2>
-                <p>Committed to building world-class logistics infrastructure to support India's growing international trade</p>
+                <p>Committed to building world-class logistics infrastructure to support India's growing international
+                    trade</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <h3>Streamlining Your Supply Chain</h3>
-                    <p>We are dedicated to creating logistics infrastructure that powers India's economic growth. Our commitment to excellence has established us as a trusted partner in the development of key transportation hubs.</p>
-                    <p>With the launch of our Inland Container Depot at Vizhinjam deep-sea Port, we're taking a significant step in enhancing the port's capabilities and positioning it as a premier cargo handling destination on India's southwestern coast.</p>
+                    <p>We are dedicated to creating logistics infrastructure that powers India's economic growth. Our
+                        commitment to excellence has established us as a trusted partner in the development of key
+                        transportation hubs.</p>
+                    <p>With the launch of our Inland Container Depot at Vizhinjam deep-sea Port, we're taking a
+                        significant step in enhancing the port's capabilities and positioning it as a premier cargo
+                        handling destination on India's southwestern coast.</p>
                     <a href="#services" class="btn">Explore Our Services</a>
                 </div>
                 <div class="about-image">
@@ -559,7 +614,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Container Storage & Handling</h3>
-                        <p>State-of-the-art container storage facilities with advanced handling equipment for efficient movement and stacking of containers.</p>
+                        <p>State-of-the-art container storage facilities with advanced handling equipment for efficient
+                            movement and stacking of containers.</p>
                     </div>
                 </div>
 
@@ -569,7 +625,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Cold Storage & Warehousing</h3>
-                        <p>Temperature-controlled facilities for perishable goods and specialized warehousing options for diverse cargo requirements.</p>
+                        <p>Temperature-controlled facilities for perishable goods and specialized warehousing options
+                            for diverse cargo requirements.</p>
                     </div>
                 </div>
 
@@ -579,8 +636,9 @@
                     </div>
                     <div class="service-content">
                         <h3>Customs Clearance Support</h3>
-                        <p>Streamlined customs processing with dedicated support to ensure quick clearance and compliance with all regulatory requirements.</p>
-                     </div>
+                        <p>Streamlined customs processing with dedicated support to ensure quick clearance and
+                            compliance with all regulatory requirements.</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
@@ -589,7 +647,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Freight Consolidation</h3>
-                        <p>Efficient consolidation services to optimize shipping costs and streamline supply chain operations for various cargo types.</p>
+                        <p>Efficient consolidation services to optimize shipping costs and streamline supply chain
+                            operations for various cargo types.</p>
                     </div>
                 </div>
 
@@ -599,7 +658,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Port Connectivity & Logistics Solutions</h3>
-                        <p>Seamless connectivity between port, ICD, and distribution networks with integrated logistics solutions to ensure cargo reaches its destination efficiently.</p>
+                        <p>Seamless connectivity between port, ICD, and distribution networks with integrated logistics
+                            solutions to ensure cargo reaches its destination efficiently.</p>
                     </div>
                 </div>
 
@@ -609,7 +669,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Logistics Consulting</h3>
-                        <p>Strategic consulting services to optimize your logistics operations, reduce costs, and improve overall efficiency.</p>
+                        <p>Strategic consulting services to optimize your logistics operations, reduce costs, and
+                            improve overall efficiency.</p>
                     </div>
                 </div>
             </div>
@@ -627,22 +688,26 @@
                 <div class="feature">
                     <i class="fas fa-globe"></i>
                     <h3>Deep-Water Capabilities</h3>
-                    <p>Vizhinjam's natural depth allows it to accommodate the largest container vessels, eliminating the need for constant dredging</p>
+                    <p>Vizhinjam's natural depth allows it to accommodate the largest container vessels, eliminating the
+                        need for constant dredging</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-tachometer-alt"></i>
                     <h3>Strategic Location</h3>
-                    <p>Positioned close to major international shipping routes between Europe, Persian Gulf, and East Asia, saving time and fuel costs.</p>
+                    <p>Positioned close to major international shipping routes between Europe, Persian Gulf, and East
+                        Asia, saving time and fuel costs.</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Year-Round Operations</h3>
-                    <p>Protected harbor with minimal wave action allows for consistent operations throughout the year, including monsoon season.</p>
+                    <p>Protected harbor with minimal wave action allows for consistent operations throughout the year,
+                        including monsoon season.</p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-chart-line"></i>
                     <h3>Modern Infrastructure</h3>
-                    <p>State-of-the-art facilities with the latest technology for efficient handling of containers and cargo.</p>
+                    <p>State-of-the-art facilities with the latest technology for efficient handling of containers and
+                        cargo.</p>
                 </div>
             </div>
         </div>
@@ -660,7 +725,8 @@
                 <p>Ready to optimize your logistics operations with our innovative solutions?</p>
             </div>
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our team is ready to transform your supply chain with cutting-edge logistics solutions.</p>
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our team is ready to transform your supply chain with
+                    cutting-edge logistics solutions.</p>
                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
                     <div class="contact-info">
                         <i class="fas fa-envelope"></i>
@@ -686,7 +752,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Trinity Innovatives</h3>
-                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics, and Commodities.</p>
+                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics,
+                        and Commodities.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -720,17 +787,19 @@
         </div>
     </footer>
 
-    <script>
+    <script src="./scripts.js"></script>
+
+    <!-- <script>
         // Simple form submission handling
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
-                    
+
                     const targetId = this.getAttribute('href');
                     if (targetId === '#') return;
-                    
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
                         window.scrollTo({
@@ -740,14 +809,14 @@
                     }
                 });
             });
-            
+
             // Animation on scroll
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
                 threshold: 0.1
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -755,11 +824,12 @@
                     }
                 });
             }, observerOptions);
-            
+
             document.querySelectorAll('.service-card, .step, .feature').forEach(el => {
                 observer.observe(el);
             });
         });
-    </script>
+    </script> -->
 </body>
+
 </html>

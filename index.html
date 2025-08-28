@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +16,26 @@
             --dark-color: #2c3e50;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: var(--font-main);
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         /* Header Styles */
         header {
             background-color: var(--primary-color);
@@ -45,45 +46,45 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
             display: flex;
             align-items: center;
         }
-        
+
         .logo i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 2rem;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent-color);
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./photo-1454165804606-c3d57bc86b40.png');
@@ -93,12 +94,12 @@
             text-align: center;
             padding: 6rem 1rem;
         }
-        
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
@@ -106,7 +107,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
@@ -119,33 +120,33 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: #e67e22;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .btn-outline {
             background-color: transparent;
             border: 2px solid white;
         }
-        
+
         .btn-outline:hover {
             background-color: white;
             color: var(--primary-color);
         }
-        
+
         /* Sections */
         section {
             padding: 5rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -153,7 +154,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title h2:after {
             content: '';
             position: absolute;
@@ -163,21 +164,21 @@
             bottom: -10px;
             left: 25%;
         }
-        
+
         .section-title p {
             color: #777;
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
-        
+
         /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .service-card {
             background-color: white;
             border-radius: 10px;
@@ -187,11 +188,11 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .service-icon {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             height: 100px;
@@ -201,22 +202,22 @@
             color: white;
             font-size: 2.5rem;
         }
-        
+
         .service-content {
             padding: 1.5rem;
             flex-grow: 1;
         }
-        
+
         .service-content h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .service-content p {
             margin-bottom: 1.5rem;
         }
-        
+
         /* Stats Section */
         .stats-container {
             display: flex;
@@ -225,25 +226,25 @@
             text-align: center;
             margin: 3rem 0;
         }
-        
+
         .stat {
             flex: 1;
             min-width: 200px;
             padding: 1.5rem;
         }
-        
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-text {
             color: #777;
             font-weight: 500;
         }
-        
+
         /* Approach Section */
         .approach-steps {
             display: flex;
@@ -252,7 +253,7 @@
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .step {
             background-color: white;
             border-radius: 10px;
@@ -264,11 +265,11 @@
             text-align: center;
             transition: transform 0.3s;
         }
-        
+
         .step:hover {
             transform: translateY(-5px);
         }
-        
+
         .step-number {
             background-color: var(--primary-color);
             color: white;
@@ -281,19 +282,19 @@
             margin: 0 auto 1rem;
             font-weight: bold;
         }
-        
+
         .step h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* Why Choose Us Section */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+
         .feature {
             text-align: center;
             padding: 2rem 1rem;
@@ -302,22 +303,22 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
         }
-        
+
         .feature i {
             font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
+
         .feature h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* CTA Section */
         .cta {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
@@ -327,45 +328,45 @@
             text-align: center;
             padding: 5rem 1rem;
         }
-        
+
         .cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .cta p {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark-color);
             color: white;
             padding: 3rem 0 1rem;
         }
-        
+
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section {
             flex: 1;
             min-width: 300px;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section h3 {
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
             position: relative;
             padding-bottom: 0.5rem;
         }
-        
+
         .footer-section h3:after {
             content: '';
             position: absolute;
@@ -375,43 +376,78 @@
             bottom: 0;
             left: 0;
         }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section ul li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-section ul li a {
             color: #ddd;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-section ul li a:hover {
             color: var(--accent-color);
         }
-        
+
         .contact-info {
             display: flex;
             align-items: center;
             margin-bottom: 0.8rem;
         }
-        
+
         .contact-info i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        /* Responsive Design */
+
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                width: 200px;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+
+        /* Responsive Design
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -446,18 +482,33 @@
             .step {
                 min-width: 100%;
             }
-        }
+        } */
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
+            <!-- <nav>
                 <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="commodities.html">Commodities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> -->
+            <nav>
+                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="logistics.html">Logistics</a></li>
                     <li><a href="commodities.html">Commodities</a></li>
@@ -514,8 +565,10 @@
                     </div>
                     <div class="service-content">
                         <h3>Technology</h3>
-                        <p>Cutting-edge software solutions and digital transformation services that help businesses thrive in the digital age.</p>
-                        <p>We specialize in full-stack applications, mobile app development, low-code solutions, and AI integration.</p>
+                        <p>Cutting-edge software solutions and digital transformation services that help businesses
+                            thrive in the digital age.</p>
+                        <p>We specialize in full-stack applications, mobile app development, low-code solutions, and AI
+                            integration.</p>
                         <a href="technology.html" class="btn">Learn More</a>
                     </div>
                 </div>
@@ -525,8 +578,10 @@
                     </div>
                     <div class="service-content">
                         <h3>Logistics</h3>
-                        <p>We are committed to building world class logistics infrastructure to support global trade.</p>
-                        <p>We are in the process of setting up an Inland Container Depot and Warehousing facility at Vizhinjam Deep Sea Port, India's emerging hub.</p>
+                        <p>We are committed to building world class logistics infrastructure to support global trade.
+                        </p>
+                        <p>We are in the process of setting up an Inland Container Depot and Warehousing facility at
+                            Vizhinjam Deep Sea Port, India's emerging hub.</p>
                         <a href="logistics.html" class="btn">Learn More</a>
                     </div>
                 </div>
@@ -536,7 +591,8 @@
                     </div>
                     <div class="service-content">
                         <h3>Commodities</h3>
-                        <p>Our dynamic global trade business moves essential agri-products, food items, and animal feed from farms to markets, balancing supply, demand, and price across continents.</p>
+                        <p>Our dynamic global trade business moves essential agri-products, food items, and animal feed
+                            from farms to markets, balancing supply, demand, and price across continents.</p>
                         <p>We trade in sugar, rice, spices, pulses, animal feeds, and oil & gas products.</p>
                         <a href="commodities.html" class="btn">Learn More</a>
                     </div>
@@ -628,7 +684,8 @@
     <section class="cta">
         <div class="container">
             <h2>Ready to Transform Your Business?</h2>
-            <p>Our team of experts is ready to help you leverage technology, optimize logistics, and trade commodities to drive your business forward.</p>
+            <p>Our team of experts is ready to help you leverage technology, optimize logistics, and trade commodities
+                to drive your business forward.</p>
             <a href="contact.html" class="btn">Get in Touch</a>
         </div>
     </section>
@@ -639,7 +696,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Trinity Innovatives</h3>
-                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics, and Commodities.</p>
+                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics,
+                        and Commodities.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -674,45 +732,46 @@
         </div>
     </footer>
 
+    <script src="./scripts.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Animation on scroll
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.service-card, .step, .feature').forEach(el => {
-                observer.observe(el);
-            });
-        });
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     // Smooth scrolling for navigation links
+        //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //         anchor.addEventListener('click', function (e) {
+        //             e.preventDefault();
+
+        //             const targetId = this.getAttribute('href');
+        //             if (targetId === '#') return;
+
+        //             const targetElement = document.querySelector(targetId);
+        //             if (targetElement) {
+        //                 window.scrollTo({
+        //                     top: targetElement.offsetTop - 80,
+        //                     behavior: 'smooth'
+        //                 });
+        //             }
+        //         });
+        //     });
+
+        //     // Animation on scroll
+        //     const observerOptions = {
+        //         root: null,
+        //         rootMargin: '0px',
+        //         threshold: 0.1
+        //     };
+
+        //     const observer = new IntersectionObserver((entries) => {
+        //         entries.forEach(entry => {
+        //             if (entry.isIntersecting) {
+        //                 entry.target.classList.add('animate');
+        //             }
+        //         });
+        //     }, observerOptions);
+
+        //     document.querySelectorAll('.service-card, .step, .feature').forEach(el => {
+        //         observer.observe(el);
+        //     });
+        // });
     </script>
 </body>
 

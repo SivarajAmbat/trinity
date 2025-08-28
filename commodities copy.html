@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Innovatives - Commodities Trading</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./photo-1586201375761-83865001e31c.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* About Commodities Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 2rem;
+        }
+        
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Categories Section */
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            transition: transform 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .category-header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .category-header i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-body {
+            padding: 1.5rem;
+        }
+        
+        .category-body h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .category-body ul {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .category-body ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .category-body ul li:before {
+            content: '✓';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-content {
+            padding: 1.5rem;
+        }
+        
+        .product-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .product-features {
+            margin: 1rem 0;
+        }
+        
+        .product-features li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .product-features li:before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Why Choose Us Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .stat {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            color: #777;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .about-content, .footer-content {
+                flex-direction: column;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="commodities.html" class="active">Commodities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Commodities Trading</h1>
+            <p>Global trading of premium commodities including sugar, rice, spices, pulses, and animal feeds</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Commodities Section -->
+    <section id="about-commodities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Commodities Expertise</h2>
+                <p>Global trading of premium agricultural products and commodities</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Global Reach. Local Expertise.</h3>
+                    <p>At Trinity Innovatives, we combine traditional sourcing with modern logistics to serve clients across Asia, Africa, the Middle East, and Europe. All products are quality-checked, securely packed, and shipped with complete export documentation.</p>
+                    <p>Our expertise in commodity trading spans decades, with deep knowledge of market trends, quality standards, and international trade regulations. We work directly with producers and verified exporters to ensure transparent, secure, and timely deliveries for our clients across the globe.</p>
+                    <a href="#categories" class="btn">Explore Our Products</a>
+                </div>
+                <div class="about-image">
+                    <img src="./photo-1605000797499-95a51c5269ae.png" alt="Commodities Trading">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Countries Served</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-text">Satisfied Clients</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-text">Years of Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Customer Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Product Categories</h2>
+                <p>Carefully curated commodities to meet international standards</p>
+            </div>
+            <div class="categories-container">
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-cubes"></i>
+                        <h3>Sugar Products</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Premium quality sugar products with ICUMSA certification and Brazilian origin.</p>
+                        <ul>
+                            <li>ICUMSA 45 Sugar</li>
+                            <li>Brazilian White Sugar</li>
+                            <li>Raw Sugar</li>
+                            <li>Refined Sugar</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header">
+                                                <i class="fas fa-seedling"></i>  
+                        <h3>Rice & Grains</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Premium Indian Basmati rice and other high-quality grain varieties.</p>                    
+                        <ul>
+                            <li>Indian Basmati Rice</li>
+                            <li>Long Grain Rice</li>
+                            <li>Parboiled Rice</li>
+                            <li>Specialty Grains</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-pepper-hot"></i>
+                        <h3>Spices</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Pure, potent, and aromatic spices from India, the spice capital of the world.</p>
+                        <ul>
+                            <li>Turmeric</li>
+                            <li>Cumin Seeds</li>
+                            <li>Coriander</li>
+                            <li>Specialty Blends</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Pulses & Lentils</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Protein-rich pulses and lentils known for consistent quality and excellent shelf life.</p>
+                        <ul>
+                            <li>Chickpeas</li>
+                            <li>Lentils</li>
+                            <li>Pigeon Peas</li>
+                            <li>Beans</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-cow"></i>
+                        <h3>Animal Feed</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Nutritious blends for livestock health, manufactured using high-quality grains and proteins.</p>
+                        <ul>
+                            <li>Cattle Feed</li>
+                            <li>Poultry Feed</li>
+                            <li>Specialty Feeds</li>
+                            <li>Nutritional Supplements</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-oil-well"></i>
+                        <h3>Oil & Gas</h3>
+                    </div>
+                    <div class="category-body">
+                        <p>Specialized trading in energy products and related commodities.</p>
+                        <ul>
+                            <li>Crude Oil</li>
+                            <li>Refined Products</li>
+                            <li>Natural Gas</li>
+                            <li>Petrochemicals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Our most sought-after commodities in global markets</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Sugar Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./sugar.jpg" alt="ICUMSA Sugar">
+                    </div>
+                    <div class="product-content">
+                        <h3>ICUMSA Sugar & Brazilian Sugar</h3>
+                        <p>Your Trusted Source for Premium Quality Sugar. We specialize in the global trade and distribution of high-quality sugar, with a strong focus on ICUMSA-certified sugar and Brazilian-origin sugar.</p>
+                        <ul class="product-features">
+                            <li>ICUMSA 45 Rating - Highest Purity Standard</li>
+                            <li>Direct Mill Partnerships</li>
+                            <li>Global Logistics Coordination</li>
+                            <li>Flexible Contract Options</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Basmati Rice Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./photo-1586201375761-83865001e31c.png" alt="Basmati Rice">
+                    </div>
+                    <div class="product-content">
+                        <h3>Indian-Origin Basmati Rice</h3>
+                        <p>One of India's most prized exports – known for its distinctive aroma, long slender grains, and delicate flavor. Sourced directly from the fertile plains of Punjab and Haryana.</p>
+                        <ul class="product-features">
+                            <li>Aged for 12–24 months for better flavor</li>
+                            <li>Extra-long grain with minimal breakage</li>
+                            <li>Export-quality packaging</li>
+                            <li>White, steamed, and parboiled variants</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Spices Product -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./spices.jpg" alt="Spices">
+                    </div>
+                    <div class="product-content">
+                        <h3>Indian Spices</h3>
+                        <p>Pure, Potent, and Aromatic. India is the spice capital of the world, and we bring the best of it directly to your doorstep.</p>
+                        <ul class="product-features">
+                            <li>Turmeric (Whole & Powder)</li>
+                            <li>Cumin Seeds & Coriander Seeds</li>
+                            <li>Black Pepper & Red Chilli</li>
+                            <li>Custom Spice Blends available</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Trinity Commodities</h2>
+                <p>Our competitive advantages in global commodities trading</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Direct Partnerships</h3>
+                    <p>No intermediaries, ensuring best prices and authenticity</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous quality control and certification compliance</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-ship"></i>
+                    <h3>Global Logistics</h3>
+                    <p>Seamless coordination from source to destination</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Flexible Terms</h3>
+                    <p>Spot deals, long-term contracts, and CIF/FOB terms available</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>End-to-End Support</h3>
+                    <p>From documentation to customs clearance, we handle everything</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Network</h3>
+                    <p>Extensive network of partners and clients worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: var(--primary-color); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Contact Us</h2>
+                <p>Ready to source premium commodities for your business?</p>
+            </div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our team is ready to provide you with the highest quality commodities and reliable supply chain solutions.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>commodities@trinityinnovatives.com</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98715 51515</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-globe"></i>
+                        <span>https://www.trinityinnovatives.com</span>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-outline">Get Started Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trinity Innovatives</h3>
+                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics, and Commodities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                        <li><a href="commodities.html">Commodities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>F 84/F 2 Swastik Apts., Dilshad Colony, New Delhi-110 095</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98715 51515</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>augustine@trinityinnovatives.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trinity Innovatives. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animation on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.category-card, .product-card, .feature').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

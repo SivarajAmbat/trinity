@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,26 +16,26 @@
             --dark-color: #2c3e50;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: var(--font-main);
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
         }
-        
+
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         /* Header Styles */
         header {
             background-color: var(--primary-color);
@@ -45,45 +46,45 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
             display: flex;
             align-items: center;
         }
-        
+
         .logo i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 2rem;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
             font-weight: 500;
         }
-        
+
         .nav-links a:hover {
             color: var(--accent-color);
         }
-        
+
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./photo-1586201375761-83865001e31c.png');
@@ -93,12 +94,12 @@
             text-align: center;
             padding: 6rem 1rem;
         }
-        
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
@@ -106,7 +107,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
@@ -119,33 +120,33 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: #e67e22;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
+
         .btn-outline {
             background-color: transparent;
             border: 2px solid white;
         }
-        
+
         .btn-outline:hover {
             background-color: white;
             color: var(--primary-color);
         }
-        
+
         /* Sections */
         section {
             padding: 5rem 0;
         }
-        
+
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
         }
-        
+
         .section-title h2 {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -153,7 +154,7 @@
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title h2:after {
             content: '';
             position: absolute;
@@ -163,14 +164,14 @@
             bottom: -10px;
             left: 25%;
         }
-        
+
         .section-title p {
             color: #777;
             max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
-        
+
         /* About Commodities Section */
         .about-content {
             display: flex;
@@ -178,19 +179,19 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .about-text {
             flex: 1;
             min-width: 300px;
             padding-right: 2rem;
         }
-        
+
         .about-text h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.8rem;
         }
-        
+
         .about-image {
             flex: 1;
             min-width: 300px;
@@ -199,13 +200,13 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .about-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         /* Categories Section */
         .categories-container {
             display: flex;
@@ -213,7 +214,7 @@
             gap: 2rem;
             justify-content: center;
         }
-        
+
         .category-card {
             background: white;
             border-radius: 10px;
@@ -224,58 +225,58 @@
             max-width: 350px;
             transition: transform 0.3s;
         }
-        
+
         .category-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .category-header {
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 1.5rem;
             text-align: center;
         }
-        
+
         .category-header i {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        
+
         .category-body {
             padding: 1.5rem;
         }
-        
+
         .category-body h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .category-body ul {
             list-style-type: none;
             margin: 1rem 0;
         }
-        
+
         .category-body ul li {
             margin-bottom: 0.5rem;
             display: flex;
             align-items: flex-start;
         }
-        
+
         .category-body ul li:before {
             content: '✓';
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        
+
         /* Products Section */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-        
+
         .product-card {
             background-color: white;
             border-radius: 10px;
@@ -283,61 +284,61 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .product-card:hover {
             transform: translateY(-10px);
         }
-        
+
         .product-image {
             height: 200px;
             overflow: hidden;
         }
-        
+
         .product-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s;
         }
-        
+
         .product-card:hover .product-image img {
             transform: scale(1.05);
         }
-        
+
         .product-content {
             padding: 1.5rem;
         }
-        
+
         .product-content h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .product-features {
             margin: 1rem 0;
         }
-        
+
         .product-features li {
             margin-bottom: 0.5rem;
             display: flex;
             align-items: flex-start;
         }
-        
+
         .product-features li:before {
             content: '•';
             color: var(--accent-color);
             font-weight: bold;
             margin-right: 0.5rem;
         }
-        
+
         /* Why Choose Us Section */
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+
         .feature {
             text-align: center;
             padding: 2rem 1rem;
@@ -346,22 +347,22 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
-        
+
         .feature:hover {
             transform: translateY(-5px);
         }
-        
+
         .feature i {
             font-size: 2.5rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
+
         .feature h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        
+
         /* Stats Section */
         .stats-container {
             display: flex;
@@ -370,52 +371,52 @@
             text-align: center;
             margin: 3rem 0;
         }
-        
+
         .stat {
             flex: 1;
             min-width: 200px;
             padding: 1.5rem;
         }
-        
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: bold;
             color: var(--primary-color);
             margin-bottom: 0.5rem;
         }
-        
+
         .stat-text {
             color: #777;
             font-weight: 500;
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark-color);
             color: white;
             padding: 3rem 0 1rem;
         }
-        
+
         .footer-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section {
             flex: 1;
             min-width: 300px;
             margin-bottom: 2rem;
         }
-        
+
         .footer-section h3 {
             margin-bottom: 1.5rem;
             font-size: 1.3rem;
             position: relative;
             padding-bottom: 0.5rem;
         }
-        
+
         .footer-section h3:after {
             content: '';
             position: absolute;
@@ -425,44 +426,79 @@
             bottom: 0;
             left: 0;
         }
-        
+
         .footer-section ul {
             list-style: none;
         }
-        
+
         .footer-section ul li {
             margin-bottom: 0.8rem;
         }
-        
+
         .footer-section ul li a {
             color: #ddd;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-section ul li a:hover {
             color: var(--accent-color);
         }
-        
+
         .contact-info {
             display: flex;
             align-items: center;
             margin-bottom: 0.8rem;
         }
-        
+
         .contact-info i {
             margin-right: 10px;
             color: var(--accent-color);
         }
-        
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
-        /* Responsive Design */
+
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                width: 200px;
+                padding: 1rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                border-radius: 0 0 5px 5px;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+
+        /* Responsive Design */
+        /* @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
@@ -492,14 +528,15 @@
                 flex-direction: column;
                 gap: 1.5rem;
             }
-        }
+        } */
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
-            <nav>
+            <!-- <nav>
                 <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -507,6 +544,20 @@
                     <li><a href="technology.html">Technology</a></li>
                     <li><a href="logistics.html">Logistics</a></li>
                     <li><a href="commodities.html" class="active">Commodities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> -->
+            <nav>
+                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="commodities.html">Commodities</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -532,8 +583,13 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Global Reach. Local Expertise.</h3>
-                    <p>At Trinity Innovatives, we combine traditional sourcing with modern logistics to serve clients across Asia, Africa, the Middle East, and Europe. All products are quality-checked, securely packed, and shipped with complete export documentation.</p>
-                    <p>Our expertise in commodity trading spans decades, with deep knowledge of market trends, quality standards, and international trade regulations. We work directly with producers and verified exporters to ensure transparent, secure, and timely deliveries for our clients across the globe.</p>
+                    <p>At Trinity Innovatives, we combine traditional sourcing with modern logistics to serve clients
+                        across Asia, Africa, the Middle East, and Europe. All products are quality-checked, securely
+                        packed, and shipped with complete export documentation.</p>
+                    <p>Our expertise in commodity trading spans decades, with deep knowledge of market trends, quality
+                        standards, and international trade regulations. We work directly with producers and verified
+                        exporters to ensure transparent, secure, and timely deliveries for our clients across the globe.
+                    </p>
                     <a href="#categories" class="btn">Explore Our Products</a>
                 </div>
                 <div class="about-image">
@@ -590,14 +646,14 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="category-card">
                     <div class="category-header">
-                                                <i class="fas fa-seedling"></i>  
+                        <i class="fas fa-seedling"></i>
                         <h3>Rice & Grains</h3>
                     </div>
                     <div class="category-body">
-                        <p>Premium Indian Basmati rice and other high-quality grain varieties.</p>                    
+                        <p>Premium Indian Basmati rice and other high-quality grain varieties.</p>
                         <ul>
                             <li>Indian Basmati Rice</li>
                             <li>Long Grain Rice</li>
@@ -606,7 +662,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="category-card">
                     <div class="category-header">
                         <i class="fas fa-pepper-hot"></i>
@@ -622,7 +678,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="category-card">
                     <div class="category-header">
                         <i class="fas fa-seedling"></i>
@@ -638,14 +694,15 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="category-card">
                     <div class="category-header">
                         <i class="fas fa-cow"></i>
                         <h3>Animal Feed</h3>
                     </div>
                     <div class="category-body">
-                        <p>Nutritious blends for livestock health, manufactured using high-quality grains and proteins.</p>
+                        <p>Nutritious blends for livestock health, manufactured using high-quality grains and proteins.
+                        </p>
                         <ul>
                             <li>Cattle Feed</li>
                             <li>Poultry Feed</li>
@@ -654,7 +711,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="category-card">
                     <div class="category-header">
                         <i class="fas fa-oil-well"></i>
@@ -681,7 +738,7 @@
                 <h2>Featured Products</h2>
                 <p>Our most sought-after commodities in global markets</p>
             </div>
-            
+
             <div class="products-grid">
                 <!-- Sugar Product -->
                 <div class="product-card">
@@ -690,7 +747,9 @@
                     </div>
                     <div class="product-content">
                         <h3>ICUMSA Sugar & Brazilian Sugar</h3>
-                        <p>Your Trusted Source for Premium Quality Sugar. We specialize in the global trade and distribution of high-quality sugar, with a strong focus on ICUMSA-certified sugar and Brazilian-origin sugar.</p>
+                        <p>Your Trusted Source for Premium Quality Sugar. We specialize in the global trade and
+                            distribution of high-quality sugar, with a strong focus on ICUMSA-certified sugar and
+                            Brazilian-origin sugar.</p>
                         <ul class="product-features">
                             <li>ICUMSA 45 Rating - Highest Purity Standard</li>
                             <li>Direct Mill Partnerships</li>
@@ -699,7 +758,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Basmati Rice Product -->
                 <div class="product-card">
                     <div class="product-image">
@@ -707,7 +766,8 @@
                     </div>
                     <div class="product-content">
                         <h3>Indian-Origin Basmati Rice</h3>
-                        <p>One of India's most prized exports – known for its distinctive aroma, long slender grains, and delicate flavor. Sourced directly from the fertile plains of Punjab and Haryana.</p>
+                        <p>One of India's most prized exports – known for its distinctive aroma, long slender grains,
+                            and delicate flavor. Sourced directly from the fertile plains of Punjab and Haryana.</p>
                         <ul class="product-features">
                             <li>Aged for 12–24 months for better flavor</li>
                             <li>Extra-long grain with minimal breakage</li>
@@ -716,7 +776,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Spices Product -->
                 <div class="product-card">
                     <div class="product-image">
@@ -724,7 +784,8 @@
                     </div>
                     <div class="product-content">
                         <h3>Indian Spices</h3>
-                        <p>Pure, Potent, and Aromatic. India is the spice capital of the world, and we bring the best of it directly to your doorstep.</p>
+                        <p>Pure, Potent, and Aromatic. India is the spice capital of the world, and we bring the best of
+                            it directly to your doorstep.</p>
                         <ul class="product-features">
                             <li>Turmeric (Whole & Powder)</li>
                             <li>Cumin Seeds & Coriander Seeds</li>
@@ -787,7 +848,8 @@
                 <p>Ready to source premium commodities for your business?</p>
             </div>
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our team is ready to provide you with the highest quality commodities and reliable supply chain solutions.</p>
+                <p style="margin-bottom: 2rem; font-size: 1.2rem;">Our team is ready to provide you with the highest
+                    quality commodities and reliable supply chain solutions.</p>
                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
                     <div class="contact-info">
                         <i class="fas fa-envelope"></i>
@@ -813,7 +875,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Trinity Innovatives</h3>
-                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics, and Commodities.</p>
+                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics,
+                        and Commodities.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -846,7 +909,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- 
     <script>
         // Simple form submission handling
         document.addEventListener('DOMContentLoaded', function() {
@@ -887,6 +950,9 @@
                 observer.observe(el);
             });
         });
-    </script>
+    </script> -->
+
+    <script src="./scripts.js"></script>
 </body>
+
 </html>

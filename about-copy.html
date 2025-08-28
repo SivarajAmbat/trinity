@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Trinity Innovatives</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #f39c12;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1744&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 25%;
+        }
+
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* About Content */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 2rem;
+        }
+
+        .about-text h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        /* .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        } */
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* Leadership Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .leader-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .leader-image {
+            height: 250px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .img-leader {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .leader-content {
+            padding: 1.5rem;
+        }
+
+        .leader-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .leader-content .position {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Stats Section */
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .stat {
+            flex: 1;
+            min-width: 200px;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-text {
+            color: #777;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .about-content,
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .stats-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="logistics.html">Logistics</a></li>
+                    <li><a href="commodities.html">Commodities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>About Trinity Innovatives</h1>
+            <p>Learn about our mission, vision, and the team driving our success</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>Combining decades of experience to deliver innovative solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Company Overview</h3>
+                    <p>Trinity Innovatives comprises a team of seasoned professionals bringing over 70+ years of
+                        combined experience in developing cutting-edge solutions for various industries.</p>
+                    <p>Our mission is to empower businesses through cutting-edge technology solutions that drive growth,
+                        efficiency, and competitive advantage.</p>
+                    <p>Our vision is to be the global partner of choice for digital transformation, helping businesses
+                        navigate the evolving technology landscape.</p>
+                    <p>Though we are a new entity, our leadership team has a proven track record of success across
+                        multiple industries and geographies.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./photo-1454165804606-c3d57bc86b40.png" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-number">70+</div>
+                    <div class="stat-text">Years of Combined Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-text">Core Verticals</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Countries Served</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Client Focus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Leadership</h2>
+                <p>Meet the team driving our vision for delivering excellence to our customers</p>
+            </div>
+            <div class="leadership-grid">
+                <!-- Leader 1 -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <!-- <i class="fas fa-user"></i> -->
+                        <img class="img-leader" src="./Augustine.png" alt="Augustine">
+                    </div>
+                    <div class="leader-content">
+                        <h3>H C Augustine</h3>
+                        <span class="position">Founder & Chief Executive Officer</span>
+                        <p>A professional with extensive experience in global maritime operations and international
+                            business, he has deep expertise in handling complex logistics in challenging environments.
+                            He has consistently driven operational excellence and growth across diverse markets.</p>
+                    </div>
+                </div>
+
+                <!-- Leader 2 -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <!-- <i class="fas fa-user"></i> -->
+                        <img class="img-leader" src="./Vinod1.png" alt="Vinod Rana">
+                    </div>
+                    <div class="leader-content">
+                        <h3>Vinod Rana</h3>
+                        <span class="position">Director - Logistics</span>
+                        <p>A seasoned logistics and supply chain professional with 25+ years of global experience across
+                            port operations, offshore logistics, infrastructure projects, and marine services. He is a
+                            recipient of multiple commendations from clients including the US Marine Forces, US Naval
+                            Contracting, Royal Air Force (UK), Canadian MoD, and other NATO forces for exceptional
+                            service quality and cost efficiency.</p>
+                    </div>
+                </div>
+
+                <!-- Leader 3 -->
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <!-- <i class="fas fa-user"></i> -->
+                        <img class="img-leader" src="./Sivaraj1.png" alt="Sivaraj">
+                    </div>
+                    <div class="leader-content">
+                        <h3>Sivaraj Ambat</h3>
+                        <span class="position">Director - IT</span>
+                        <p>A technology expert with diverse industry experience and leads our technology vertical and
+                            innovations, ensuring top-tier infrastructure and a capable workforce. He is recognized by
+                            US-based Training Magazine as a Top 20 Emerging Leader and is an accomplished innovator &
+                            author.</p>
+                    </div>
+                </div>
+
+                <!-- Leader 4 -->
+                <!-- <div class="leader-card">
+                    <div class="leader-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="leader-content">
+                        <h3>John Doe</h3>
+                        <span class="position">Director - HR & Ops</span>
+                        <p>An experienced HR and operations professional with expertise in building high-performance
+                            teams and optimizing organizational processes. He has a proven track record in talent
+                            acquisition, employee development, and implementing efficient operational systems that drive
+                            business growth and enhance workplace culture.</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image" style="font-size: 3rem;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="leader-content">
+                        <h3>Innovation</h3>
+                        <p>We constantly seek new and better ways to solve problems and deliver value to our clients.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image" style="font-size: 3rem;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="leader-content">
+                        <h3>Integrity</h3>
+                        <p>We conduct business with honesty, transparency, and respect for all stakeholders.</p>
+                    </div>
+                </div>
+
+                <div class="leader-card">
+                    <div class="leader-image" style="font-size: 3rem;">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="leader-content">
+                        <h3>Excellence</h3>
+                        <p>We strive for the highest quality in everything we do, from solutions to customer service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trinity Innovatives</h3>
+                    <p>Empowering Businesses with Technology through innovative solutions across Technology, Logistics,
+                        and Commodities.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                        <li><a href="commodities.html">Commodities</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>F 84/F 2 Swastik Apts., Dilshad Colony, New Delhi-110 095</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 98715 51515</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>augustine@trinityinnovatives.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trinity Innovatives. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animation on scroll
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.leader-card').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+
+</html>
