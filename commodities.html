@@ -192,6 +192,15 @@
             font-size: 1.8rem;
         }
 
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .about-text a {
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
         .about-image {
             flex: 1;
             min-width: 300px;
@@ -488,6 +497,17 @@
                 border-radius: 0 0 5px 5px;
             }
 
+            .about-content,
+            .footer-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+
             .nav-links li {
                 margin: 1rem 0;
             }
@@ -496,39 +516,6 @@
                 display: flex;
             }
         }
-
-        /* Responsive Design */
-        /* @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .about-content, .footer-content {
-                flex-direction: column;
-            }
-            
-            .about-text {
-                padding-right: 0;
-                margin-bottom: 2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .stats-container {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-        } */
     </style>
 </head>
 
@@ -536,17 +523,6 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <!-- <nav>
-                <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="logistics.html">Logistics</a></li>
-                    <li><a href="commodities.html" class="active">Commodities</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav> -->
             <nav>
                 <div class="logo"><i class="fas fa-code-branch"></i>Trinity Innovatives</div>
                 <div class="hamburger" id="hamburger">
@@ -909,49 +885,6 @@
             </div>
         </div>
     </footer>
-    <!-- 
-    <script>
-        // Simple form submission handling
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Animation on scroll
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate');
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.category-card, .product-card, .feature').forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script> -->
-
     <script src="./scripts.js"></script>
 </body>
 
